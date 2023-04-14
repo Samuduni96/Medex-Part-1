@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="673.0" prefWidth="1002.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.developerstack.medex.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="673.0" fitWidth="1002.0" layoutX="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="547.0" layoutY="54.0" prefHeight="579.0" prefWidth="413.0" style="-fx-background-color: #675D50;">
+         <children>
+            <Label layoutX="165.0" layoutY="131.0" text="LOGIN" textFill="#d0cccc">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEmail" alignment="TOP_CENTER" focusColor="#2e2f32" layoutX="73.0" layoutY="190.0" prefHeight="37.0" prefWidth="265.0" promptText="Enter Email" unFocusColor="#171616">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" alignment="TOP_CENTER" focusColor="#262628" layoutX="73.0" layoutY="238.0" prefHeight="37.0" prefWidth="265.0" promptText="Enter Password">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <Hyperlink layoutX="212.0" layoutY="281.0" text="Forgot Password?" textFill="#f5eeee" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+            <JFXRadioButton fx:id="rBtnDoctor" layoutX="72.0" layoutY="319.0" selected="true" style="-jfx-selected-color: white;" text="Doctor" textFill="#f2e9e9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="accountType" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton layoutX="258.0" layoutY="319.0" style="-jfx-selected-color: white;" text="Patient" textFill="#f2e9e9" toggleGroup="$accountType">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXButton buttonType="RAISED" layoutX="68.0" layoutY="366.0" onAction="#signInOnAction" prefHeight="39.0" prefWidth="279.0" style="-fx-background-color: #A9907E;" text="Sign In" textFill="#f2ebeb">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="67.0" layoutY="457.0" onAction="#createAnAccountOnAction" prefHeight="39.0" prefWidth="279.0" style="-fx-background-color: #A9907E;" text="Create an Account" textFill="#f2ebeb">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="193.0" layoutY="421.0" text="OR" textFill="#e4e0e0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="545.0" text="From: Sigma  Cotton" textFill="#e4e0e0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="562.0" text="Version: 1.0.0" textFill="#e4e0e0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="265.0" layoutX="82.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="50.0" layoutY="53.0" prefHeight="579.0" prefWidth="497.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="398.0" fitWidth="497.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
